@@ -11,8 +11,10 @@ public class ImmutablePerformance {
         //36470
         //35857 immutable
         long startTimestamp = System.currentTimeMillis();
-        SyncObj synObj = new SyncObj();
-        synObj.setName("Alex");
+//        SyncObj synObj = new SyncObj();
+//        synObj.setName("Alex");
+
+        ImmutableObj synObj = new ImmutableObj("Alex");
 
         Thread t1 = new Thread() {
             @Override

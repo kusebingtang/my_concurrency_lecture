@@ -1,2 +1,3 @@
 rootProject.name = 'my_concurrency_lecture'
+include 'design_pattern'
 

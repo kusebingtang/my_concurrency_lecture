@@ -1,6 +1,6 @@
 package com.concurrent.classloader.chapter4;
 
-import com.wangwenjun.concurrent.classloader.chapter3.MyClassLoader;
+import com.concurrent.classloader.chapter3.MyClassLoader;
 
 import java.lang.reflect.Method;
 
@@ -13,7 +13,7 @@ public class ClassLoaderTest {
     public static void main(String[] args) throws Exception {
 
         DecryptClassLoader classLoader = new DecryptClassLoader();
-        Class<?> aClass = classLoader.loadClass("com.wangwenjun.concurrent.classloader.chapter3.MyObject");
+        Class<?> aClass = classLoader.loadClass("com.concurrent.classloader.chapter3.MyObject");
         System.out.println(aClass);
 
         Object obj = aClass.newInstance();

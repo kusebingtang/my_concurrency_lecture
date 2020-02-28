@@ -1,6 +1,6 @@
 package com.concurrent.classloader.chapter6;
 
-import com.wangwenjun.concurrent.classloader.chapter3.MyClassLoader;
+import com.concurrent.classloader.chapter3.MyClassLoader;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

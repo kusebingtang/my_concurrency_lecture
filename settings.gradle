@@ -2,4 +2,5 @@ rootProject.name = 'my_concurrency_lecture'
 include 'design_pattern'
 include 'classLoader'
 include 'JUC_Lecture'
+include 'Synchronized_Deep'
 

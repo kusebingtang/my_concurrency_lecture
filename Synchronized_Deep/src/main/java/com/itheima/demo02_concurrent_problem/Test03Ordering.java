@@ -1,6 +1,7 @@
 package com.itheima.demo02_concurrent_problem;
 
 import org.openjdk.jcstress.annotations.*;
+import org.openjdk.jcstress.infra.results.BBI_Result;
 import org.openjdk.jcstress.infra.results.I_Result;
 
 @JCStressTest
@@ -14,9 +15,9 @@ public class Test03Ordering {
     volatile boolean ready = false;
     // 线程1执行的代码
     @Actor
-    public void actor1(I_Result r) {
+    public void actor1(BBI_Result r) {
             if (ready) {
-                r.r1 = num + num;
+//                r.r1 = num + num;
             } else {
                 r.r1 = 1;
             }

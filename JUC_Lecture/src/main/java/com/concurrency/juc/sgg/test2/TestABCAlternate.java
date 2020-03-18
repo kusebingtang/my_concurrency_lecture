@@ -68,7 +68,7 @@ class AlternateDemo{
 		
 		try {
 			//1. 判断
-			if(number != 1){
+			while (number != 1){
 				condition1.await();
 			}
 			
@@ -92,7 +92,7 @@ class AlternateDemo{
 		
 		try {
 			//1. 判断
-			if(number != 2){
+			while(number != 2){
 				condition2.await();
 			}
 			
@@ -116,7 +116,7 @@ class AlternateDemo{
 		
 		try {
 			//1. 判断
-			if(number != 3){
+			while(number != 3){
 				condition3.await();
 			}
 			

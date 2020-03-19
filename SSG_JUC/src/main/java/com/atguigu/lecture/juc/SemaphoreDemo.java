@@ -23,26 +23,25 @@ public class SemaphoreDemo {
 
 
         //停六个汽车
-        for (int i = 1; i <=6 ; i++) {
-           new Thread(()->{
+        for (int i = 1; i <= 6; i++) {
+            new Thread(() -> {
 
-                   try {
-                       sp.acquire();
-                       System.out.println(Thread.currentThread().getName()
-                               +"\t号车驶入停车位");
-                       TimeUnit.SECONDS.sleep(3);
-                       System.out.println(Thread.currentThread().getName()
-                               +"\t号车驶出停车位");
-                   } catch (InterruptedException e) {
-                       e.printStackTrace();
-                   } finally {
-                       sp.release();
-                   }
+                try {
+                    sp.acquire();
+                    System.out.println(Thread.currentThread().getName()
+                            + "\t号车驶入停车位");
+                    TimeUnit.SECONDS.sleep(3);
+                    System.out.println(Thread.currentThread().getName()
+                            + "\t号车驶出停车位");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    sp.release();
+                }
 
 
-           },String.valueOf(i)).start();
+            }, String.valueOf(i)).start();
         }
-
 
 
     }

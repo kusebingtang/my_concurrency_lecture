@@ -2,49 +2,40 @@ package com.atguigu.lecture.juc;
 
 import java.util.concurrent.TimeUnit;
 
-class Phone
-{
+class Phone {
 
-    public static   synchronized void sendSMS() throws Exception
-    {
+    public static synchronized void sendSMS() throws Exception {
         TimeUnit.SECONDS.sleep(4);
         System.out.println("------sendSMS");
     }
-    public  synchronized void sendEmail() throws Exception
-    {
+
+    public synchronized void sendEmail() throws Exception {
         System.out.println("------sendEmail");
     }
 
 
-    public  void getHello(){
-        System.out.println("--------Hello java190401!!!");
+    public void getHello() {
+        System.out.println("--------Hello !!!");
     }
-
-
 
 
 }
 
 /**
- *
- * @Description: 8锁
  * @author xialei
- *
-1 标准访问，先打印短信还是邮件
-2 停4秒在短信方法内，先打印短信还是邮件
-3 新增普通的hello方法，是先打短信还是hello
-4 现在有两部手机，先打印短信还是邮件
-5 两个静态同步方法，1部手机，先打印短信还是邮件
-6 两个静态同步方法，2部手机，先打印短信还是邮件
-7 1个静态同步方法,1个普通同步方法，1部手机，先打印短信还是邮件
-8 1个静态同步方法,1个普通同步方法，2部手机，先打印短信还是邮件
-
-
+ * <p>
+ * 1 标准访问，先打印短信还是邮件
+ * 2 停4秒在短信方法内，先打印短信还是邮件
+ * 3 新增普通的hello方法，是先打短信还是hello
+ * 4 现在有两部手机，先打印短信还是邮件
+ * 5 两个静态同步方法，1部手机，先打印短信还是邮件
+ * 6 两个静态同步方法，2部手机，先打印短信还是邮件
+ * 7 1个静态同步方法,1个普通同步方法，1部手机，先打印短信还是邮件
+ * 8 1个静态同步方法,1个普通同步方法，2部手机，先打印短信还是邮件
+ * @Description: 8锁
  */
-public class Lock_8
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Lock_8 {
+    public static void main(String[] args) throws Exception {
 
         Phone phone = new Phone();
         Phone phone2 = new Phone();

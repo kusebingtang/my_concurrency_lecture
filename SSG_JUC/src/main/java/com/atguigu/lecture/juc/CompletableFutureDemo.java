@@ -29,6 +29,7 @@ public class CompletableFutureDemo {
                 }
         ).exceptionally(
                 f->{
+                    System.out.println("=====exceptionally=====");
                     System.out.println(f.getMessage());
                     return 444;
                 }
